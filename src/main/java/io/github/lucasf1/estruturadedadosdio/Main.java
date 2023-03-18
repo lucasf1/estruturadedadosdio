@@ -57,7 +57,7 @@ public class Main {
         System.out.println(minhaListaEncadiada);
     }
 
-    private static void testaListaDuplamenteEncadeada() {
+    private static void testarListaDuplamenteEncadeada() {
         ListaDuplamenteEncadeada<String> minhaLista = new ListaDuplamenteEncadeada<>();
         minhaLista.add("c1");
         minhaLista.add("c2");
@@ -74,10 +74,38 @@ public class Main {
         System.out.println(minhaLista.get(3));
     }
 
+    private static void testarListaCircular() {
+        ListaCircular<String> minhaListaCircular = new ListaCircular<>();
+
+        minhaListaCircular.add("c0");
+        System.out.println(minhaListaCircular);
+
+        minhaListaCircular.remove(0);
+        System.out.println(minhaListaCircular);
+
+        minhaListaCircular.add("c1");
+        System.out.println(minhaListaCircular);
+
+        minhaListaCircular.add("c2");
+        minhaListaCircular.add("c3");
+        System.out.println(minhaListaCircular);
+
+//        System.out.println(minhaListaCircular.get(0));
+//        System.out.println(minhaListaCircular.get(1));
+//        System.out.println(minhaListaCircular.get(2));
+//        System.out.println(minhaListaCircular.get(3));
+//        System.out.println(minhaListaCircular.get(4));
+
+        for (int i = 0; i < 20; i++) {
+            System.out.println(minhaListaCircular.get(i));
+        }
+    }
+
     public static void main(String[] args) {
         // testarPilha();
         // testarFila();
         // testarListaEncadeada();
-        testaListaDuplamenteEncadeada();
+        // testarListaDuplamenteEncadeada();
+        testarListaCircular();
     }
 }
